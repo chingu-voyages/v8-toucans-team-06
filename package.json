@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/chingu-voyages/v8-toucans-team-06/issues"
   },
-  "homepage": "https://github.com/chingu-voyages/v8-toucans-team-06#readme"
+  "homepage": "https://github.com/chingu-voyages/v8-toucans-team-06#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
 }
