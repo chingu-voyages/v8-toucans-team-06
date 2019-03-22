@@ -1,0 +1,28 @@
+{
+  "name": "v8-toucans-team-06",
+  "version": "1.0.0",
+  "description": "random quote generator proejct",
+  "main": "main.js",
+  "scripts": {
+    "start": "npm run live",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "live": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chingu-voyages/v8-toucans-team-06.git"
+  },
+  "keywords": [
+    "chingu",
+    "voyage8"
+  ],
+  "author": "V8 Toucans Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chingu-voyages/v8-toucans-team-06/issues"
+  },
+  "homepage": "https://github.com/chingu-voyages/v8-toucans-team-06#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
