@@ -2,6 +2,7 @@ var url = "https://cors-anywhere.herokuapp.com/https://api.forismatic.com/api/1.
 var quoteField = document.getElementById("quote");
 var authorField = document.getElementById("author");
 var quoteButton = document.getElementById("quoteButton");
+
 function getQuote() {
   fetch(url)
     .then(function(response) {
@@ -18,8 +19,11 @@ function getQuote() {
       }
     })
     .catch(function() {
-      quoteField.innerHTML = "An error occured.  Please try again.";
-      authorField.innerHTML = "";
+      if (quoteField.innerHTML == "An error occured.  Please try again.") {
+        quoteField.innerHTML = "";
+        authorField.innerHTML = "";
+        getQuote();
+      }
     });
 };
 window.onload = getQuote();
