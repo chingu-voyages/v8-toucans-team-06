@@ -2,7 +2,7 @@ var url = "https://cors-anywhere.herokuapp.com/https://api.forismatic.com/api/1.
 var quoteField = document.getElementById("quote");
 var authorField = document.getElementById("author");
 var quoteButton = document.getElementById("quoteButton");
-var tweet = document.getElementById("tweet");
+var tweetButton = document.getElementById("tweet");
 function getQuote() {
   fetch(url)
     .then(function(response) {
@@ -22,14 +22,14 @@ function getQuote() {
       quoteField.innerHTML = "An error occured.  Please try again.";
       authorField.innerHTML = "";
     });
-      
-	};
-	function tweet() {
-		$('#tweet').on("click",function(){
-window.open("https://twitter.com/intent/tweet?text=" + quote);
-});
+      	};
+	
+	quoteButton.addEventListener("click", getQuote);
+	tweet.addEventListener("click", tweetQuote);
+
+
+	function tweetQuote() {
+		tweetButton.setAttribute('href', `https://twitter.com/intent/tweet?text=${quote}`);
 	}
-	window.onload = getQuote();
-quoteButton.addEventListener("click", getQuote);
-tweet.addEventListener("click", tweet);
+	
 
