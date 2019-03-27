@@ -17,3 +17,14 @@ main {
     place-items: center;
     width: 60vw;
 }
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+section blockquote{
+    grid-column-start: span 2 ;
+}
+cite {
+    float: right;
+}
