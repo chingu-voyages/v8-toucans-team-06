@@ -1,0 +1,30 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(255, 235, 205);
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+main {
+    background-color: #fff;
+    display: grid;
+    height: 40vh;
+    margin: 20vmin;
+    overflow: auto;
+    place-items: center;
+    width: 60vw;
+}
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+section blockquote{
+    grid-column-start: span 2 ;
+}
+cite {
+    float: right;
+}
