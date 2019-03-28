@@ -42,8 +42,6 @@ function getQuote() {
     })
     .catch(function() {
       if (quoteField.innerHTML == "An error occured.  Please try again.") {
-        // quoteField.innerHTML = "";
-        // authorField.innerHTML = "";
         getQuote();
       }
     });
