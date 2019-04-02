@@ -48,6 +48,14 @@ function getQuote() {
   viewUpdate();
 };
 
-window.onload = getQuote();
+// tweet button
+function displayQuote() {
+  var quote = document.getElementById("quote").textContent;
+  var author = document.getElementById("author").textContent;
+  window.open(`https://twitter.com/intent/tweet?text=${quote} \n \n + ${author}`);
+};
 
+// events
+window.onload = getQuote();
 quoteButton.addEventListener("click", getQuote);
+tweet.addEventListener("click", displayQuote);
