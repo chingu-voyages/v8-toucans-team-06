@@ -9,7 +9,7 @@ var quoteButton = document.getElementById("quoteButton");
 // updates the document with a random color and random bg image
 function viewUpdate() {
   // sets color of body to blank with 50% opacity
-  var newColor = [0, 0, 0, 0.5];
+  var newColor = [0, 0, 0, 0.3];
   // this function uses a for loop to update background color
   for (var i = 0; i < 3; i++) {
     var color = Math.floor(Math.random() * (255 - 1) + 0);
@@ -18,7 +18,7 @@ function viewUpdate() {
   // turns the color into a string to be passed on to ...
   var color = "rgba(" + newColor + ")";
   // this updates the body#main with the new color in line 19 above
-  document.getElementById("body").style.background = color;
+  document.getElementById("colorChanger").style.background = color;
   // choose a random number between 1 - 23
   var randNum = Math.floor(Math.random() * 22 + 1);
   // updates the background image to one that matches the rand num above
@@ -42,33 +42,20 @@ function getQuote() {
     })
     .catch(function() {
       if (quoteField.innerHTML == "An error occured.  Please try again.") {
-        // quoteField.innerHTML = "";
-        // authorField.innerHTML = "";
         getQuote();
       }
     });
   viewUpdate();
 };
 
-
-// test
+// tweet button
 function displayQuote() {
   var quote = document.getElementById("quote").textContent;
   var author = document.getElementById("author").textContent;
   window.open(`https://twitter.com/intent/tweet?text=${quote} \n \n + ${author}`);
 };
 
+// events
 window.onload = getQuote();
-
-
-
 quoteButton.addEventListener("click", getQuote);
-
-
-
 tweet.addEventListener("click", displayQuote);
-
-
-
-
-
